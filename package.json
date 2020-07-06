@@ -1,0 +1,31 @@
+{
+  "name": "xpay-nodejs",
+  "version": "3.0.4",
+  "description": "XPay API wrapper",
+  "homepage": "https://github.com/mofancloud/xpay-nodejs",
+  "author": "XPay <xpay@lucfish.com> (https://pay.lucfish.com)",
+  "contributors": [
+    "Xpay <xpay@lucfish.com>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xxxpay/xpay-nodejs.git"
+  },
+  "bugs:": "https://github.com/xxxpay/xpay-nodejs/issues",
+  "engines": {
+    "node": ">=4"
+  },
+  "main": "lib/xpay.js",
+  "devDependencies": {
+    "chai": "~1.8.0",
+    "chai-as-promised": "~4.0.0",
+    "mocha": "~5.1.1"
+  },
+  "dependencies": {
+    "lodash": "^4.1.0",
+    "qs": "^2.4.1"
+  },
+  "scripts": {
+    "test": "sh APITEST"
+  }
+}
