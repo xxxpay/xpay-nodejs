@@ -85,7 +85,7 @@ xpay.orders.pay(
 );
 
 /**
- * 查询订单中 Charge 对象
+ * 查询订单中 Payment 对象
  */
 xpay.orders.retrieveCharge(
   "2001708220000221911", //  orderId

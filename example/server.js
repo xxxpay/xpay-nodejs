@@ -56,8 +56,8 @@ var createPayment = function (channel, amount, client_ip, open_id, cb) {
     amount: amount, //订单总金额, 人民币单位：分（如订单总金额为 1 元，此处请填 100）
     client_ip: client_ip, // 发起支付请求客户端的 IP 地址，格式为 IPV4，如: 127.0.0.1
     currency: "cny",
-    subject: "Charge Subject",
-    body: "Charge Body",
+    subject: "Payment Subject",
+    body: "Payment Body",
     extra: extra
   }, cb);
 };
