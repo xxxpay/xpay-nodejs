@@ -1,6 +1,6 @@
 'use strict';
 
-// SDK 支持 Promise，以 charge 为例，可以按以下方法调用
+// SDK 支持 Promise，以 payment 为例，可以按以下方法调用
 
 const API_KEY = 'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC';
 const APP_ID = 'app_1Gqj58ynP0mHeX1q';

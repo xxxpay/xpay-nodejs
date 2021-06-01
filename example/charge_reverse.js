@@ -20,11 +20,11 @@ xpay.setPrivateKeyPath(__dirname + '/your_rsa_private_key.pem');
 
 xpay.payments.reverse(
   'ch_ynT0uT5OmnHOTuDy90D8C44S', {},
-  function (err, charge) {
+  function (err, payment) {
     if (err != null) {
       console.log(err);
     } else {
-      console.log(charge);
+      console.log(payment);
     }
     // YOUR CODE
   }

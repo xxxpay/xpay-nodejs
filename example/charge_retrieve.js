@@ -20,11 +20,11 @@ xpay.setPrivateKeyPath(__dirname + '/your_rsa_private_key.pem');
 
 xpay.payments.retrieve(
   'ch_bLWP80Ci9S4ODaXLSKLOGe5S',
-  function (err, charge) {
+  function (err, payment) {
     if (err != null) {
       console.log('xpay.payments.retrieve failed: ', err);
     } else {
-      console.log(charge);
+      console.log(payment);
     }
     // YOUR CODE
   }

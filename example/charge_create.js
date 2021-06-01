@@ -46,11 +46,11 @@ xpay.payments.create({
   subject: 'Your Subject',
   body: 'Your Body',
   extra: extra
-}, function (err, charge) {
+}, function (err, payment) {
   if (err != null) {
     console.log('xpay.payments.create failed: ', err);
   } else {
-    console.log(charge);
+    console.log(payment);
   }
   // YOUR CODE
 });

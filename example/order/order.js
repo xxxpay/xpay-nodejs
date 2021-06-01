@@ -73,7 +73,7 @@ var extra = charge_extra(channel);
 xpay.orders.pay(
   "2001709010000002851", {
     "channel": channel, // 支付渠道
-    "charge_amount": 100, // 使用 charge 支付金额
+    "charge_amount": 100, // 使用 payment 支付金额
     "extra": extra
   },
   function (err, order) {
@@ -90,7 +90,7 @@ xpay.orders.pay(
 xpay.orders.retrieveCharge(
   "2001708220000221911", //  orderId
   "ch_88mbTKu9mbn9mfT4KSCiHiX5", // chargeId
-  function (err, charge) {
+  function (err, payment) {
     if (err != null) {
       console.log("xpay.orders.retrievePayment fail:", err)
     }

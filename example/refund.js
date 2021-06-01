@@ -11,7 +11,7 @@ var xpay = require('../lib/xpay')(API_KEY);
 
 xpay.setTimeout(60000)
 
-// 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 charge 对象发起退款
+// 通过发起一次退款请求创建一个新的 refund 对象，只能对已经发生交易并且没有全额退款的 payment 对象发起退款
 xpay.payments.createRefund(
   "ch_bLWP80Ci9S4ODaXLSKLOGe5S",
   // amount 为退款的金额, 单位为对应币种的最小货币单位，例如：人民币为分（如退款金额为 1 元，此处请填 100）。必须小于等于可退款金额，默认为全额退款

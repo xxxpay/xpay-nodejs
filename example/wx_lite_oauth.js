@@ -22,7 +22,7 @@ xpay.wxOAuth.getWxLiteOpenid(
     // { "openid": "OPENID", "session_key": "SESSIONKEY" }
 
     // ...
-    // pass openid to extra['open_id'] and create a charge
+    // pass openid to extra['open_id'] and create a payment
     // ...
   }
 );

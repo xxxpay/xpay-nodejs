@@ -19,16 +19,16 @@ http.createServer(function (req, res) {
       xpay.wxOAuth.getOpenid('WX_PUB_APP_ID', 'WX_PUB_APP_SECRET', urlParts.query.code, function (err, res) {
         console.log(res.openid);
         // ...
-        // pass openid to extra['open_id'] and create a charge
+        // pass openid to extra['open_id'] and create a payment
         // ...
       });
       break;
     case '/signature': // 微信公众号获取签名
       xpay.wxOAuth.getJsapiTicket('WX_PUB_APP_ID', 'WX_PUB_APP_SECRET', function (e, response) {
         // response['ticket'] 是获得的 jsapi_ticket，有效期为 7200 秒，需在自己的服务器全局缓存。
-        var charge = {
-          /* 准备支付的 charge */ };
-        var signature = xpay.wxOAuth.getSignature(charge, response['ticket'], 'PAY_PAGE_URL');
+        var payment = {
+          /* 准备支付的 payment */ };
+        var signature = xpay.wxOAuth.getSignature(payment, response['ticket'], 'PAY_PAGE_URL');
         res.writeHead(200);
         res.end(signature);
       });

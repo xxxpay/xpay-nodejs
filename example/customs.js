@@ -15,7 +15,7 @@ xpay.setPrivateKeyPath(__dirname + '/your_rsa_private_key.pem');
 /* 创建海关报关 */
 xpay.customs.create({
   app: APP_ID,
-  charge: "ch_bLWP80Ci9S4ODaXLSKLOGe5S", // CHARGE ID
+  payment: "ch_bLWP80Ci9S4ODaXLSKLOGe5S", // CHARGE ID
   channel: "upacp", // 支付渠道
   trade_no: new Date().getTime().toString(), // 用户报关订单号
   customs_code: "GUANGZHOU", // 报关渠道
