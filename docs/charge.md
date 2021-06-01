@@ -12,7 +12,7 @@ xpay.payments.create({
   subject:   "Your Subject",
   body:      "Your Body",
   extra:     extra
-}, function(err, charge) {
+}, function(err, payment) {
   // YOUR CODE
 });
 ```
@@ -21,7 +21,7 @@ xpay.payments.create({
 ``` js
 xpay.payments.retrieve(
   "CHARGE_ID",
-  function(err, charge) {
+  function(err, payment) {
     // YOUR CODE
   }
 );

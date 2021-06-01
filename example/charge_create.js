@@ -20,11 +20,11 @@ xpay.setPrivateKeyPath(__dirname + '/your_rsa_private_key.pem');
 // ......\n\
 // -----END RSA PRIVATE KEY-----');
 
-// 请求参数的 extra 对应各渠道的取值规则请查看 charge_extra 相应方法内说明
-var charge_extra = require('./charge_extra');
+// 请求参数的 extra 对应各渠道的取值规则请查看 payment_extra 相应方法内说明
+var payment_extra = require('./payment_extra');
 
 var channel = 'alipay'; // 支付使用的第三方支付渠道取值，请参考：https://pay.lucfish.com/api#api-c-new
-var extra = charge_extra(channel);
+var extra = payment_extra(channel);
 
 /**
  *  商户订单号，适配每个渠道对此参数的要求，必须在商户系统内唯一。(alipay : 1-64 位，

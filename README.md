@@ -42,7 +42,7 @@ xpay.payments.create({
   subject:   "Your Subject",
   body:      "Your Body",
   extra:     extra
-}, function(err, charge) {
+}, function(err, payment) {
   // YOUR CODE
 });
 ```
@@ -51,7 +51,7 @@ xpay.payments.create({
 ``` js
 xpay.payments.retrieve(
   "CHARGE_ID",
-  function(err, charge) {
+  function(err, payment) {
     // YOUR CODE
   }
 );
@@ -118,7 +118,7 @@ xpay.redEnvelopes.create({
 ```
 
 ### 微信公众号获取签名
-如果使用微信 JS-SDK 来调起支付，需要在创建 `charge` 后，获取签名（`signature`），传给 HTML5 SDK。
+如果使用微信 JS-SDK 来调起支付，需要在创建 `payment` 后，获取签名（`signature`），传给 HTML5 SDK。
 ``` js
 xpay.wxOAuth.getJsapiTicket(wx_app_id, wx_app_secret, function(e, response){
   var ticket = response['ticket'];

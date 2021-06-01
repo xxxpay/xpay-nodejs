@@ -15,7 +15,7 @@ xpay.wxOAuth.getWxPubOpenid(
     // { "openid": "OPENID" }
 
     // ...
-    // pass openid to extra['open_id'] and create a charge
+    // pass openid to extra['open_id'] and create a payment
     // ...
   }
 );
@@ -36,14 +36,14 @@ xpay.wxOAuth.getWxLiteOpenid(
     // { "openid": "OPENID", "session_key": "SESSIONKEY" }
 
     // ...
-    // pass openid to extra['open_id'] and create a charge
+    // pass openid to extra['open_id'] and create a payment
     // ...
   }
 );
 ```
 
 ## 微信公众号获取签名
-如果使用微信 JS-SDK 来调起支付，需要在创建 `charge` 后，获取签名（`signature`），传给 HTML5 SDK。
+如果使用微信 JS-SDK 来调起支付，需要在创建 `payment` 后，获取签名（`signature`），传给 HTML5 SDK。
 ``` js
 xpay.wxOAuth.getJsapiTicket(
   '<WX_PUB_APP_ID>', '<WX_PUB_APP_SECRET>',
@@ -56,10 +56,10 @@ xpay.wxOAuth.getJsapiTicket(
 
 _下面方法中 `url` 是当前网页的 URL，不包含`#`及其后面部分_
 ``` js
-var signature = xpay.wxOAuth.getSignature(charge, ticket, url);
+var signature = xpay.wxOAuth.getSignature(payment, ticket, url);
 ```
 
 然后在 HTML5 SDK 里调用
 ``` js
-xpay.createPayment(charge, callback, signature, false);
+xpay.createPayment(payment, callback, signature, false);
 ```

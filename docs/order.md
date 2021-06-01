@@ -40,7 +40,7 @@ xpay.orders.pay(
   "ORDER_ID",
   {
     "channel":"alipay",
-    "charge_amount": 100,
+    "payment_amount": 100,
   },
   function(err, order) {
     // YOUR CODE
@@ -85,12 +85,12 @@ xpay.orders.retrieveRefund(
 
 ### 查询订单中 Payment 对象
 ``` js
-xpay.orders.retrieveCharge(
+xpay.orders.retrievePayment(
   "2001708220000221911",          //  orderId
-  "ch_88mbTKu9mbn9mfT4KSCiHiX5",  // chargeId
-  function(err, charge) {
+  "ch_88mbTKu9mbn9mfT4KSCiHiX5",  // paymentId
+  function(err, payment) {
     if (err!=null){
-      console.log("xpay.orders.retrieveCharge fail:",err)
+      console.log("xpay.orders.retrievePayment fail:",err)
     }
     // YOUR CODE
   }

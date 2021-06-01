@@ -8,7 +8,7 @@ var params = {
   'user': 'user_test_02', // 充值目标用户 ID, 必传
   'user_fee': 10, // 用户充值收取的手续费，单位分，不得大于 amount，不可和 balance_bonus[amount] 同时传，默认 0。可选
   'description': 'Recharge description.', // 描述, 可选
-  'charge': {
+  'payment': {
     'amount': 30, // 用户实际支付金额，单位分, 必传
     'channel': channel, // 支付使用的第三方支付渠道, 必传
     'order_no': order_no, // 商户订单号，适配每个渠道对此参数的要求，必须在商户系统内唯一, 必传

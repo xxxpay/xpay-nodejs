@@ -66,14 +66,14 @@ xpay.orders.retrieve(
 /**
  *  标记订单为支付状态
  */
-//请求参数的 extra 对应各渠道的取值规则请查看 charge_extra 相应方法内说明
-var charge_extra = require('../charge_extra');
+//请求参数的 extra 对应各渠道的取值规则请查看 payment_extra 相应方法内说明
+var payment_extra = require('../payment_extra');
 var channel = 'alipay'; // 支付使用的第三方支付渠道取值，请参考：https://pay.lucfish.com/api#api-c-new
-var extra = charge_extra(channel);
+var extra = payment_extra(channel);
 xpay.orders.pay(
   "2001709010000002851", {
     "channel": channel, // 支付渠道
-    "charge_amount": 100, // 使用 payment 支付金额
+    "payment_amount": 100, // 使用 payment 支付金额
     "extra": extra
   },
   function (err, order) {
@@ -87,9 +87,9 @@ xpay.orders.pay(
 /**
  * 查询订单中 Payment 对象
  */
-xpay.orders.retrieveCharge(
+xpay.orders.retrievePayment(
   "2001708220000221911", //  orderId
-  "ch_88mbTKu9mbn9mfT4KSCiHiX5", // chargeId
+  "ch_88mbTKu9mbn9mfT4KSCiHiX5", // paymentId
   function (err, payment) {
     if (err != null) {
       console.log("xpay.orders.retrievePayment fail:", err)
