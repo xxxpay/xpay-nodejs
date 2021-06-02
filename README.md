@@ -128,11 +128,11 @@ xpay.wxOAuth.getJsapiTicket(wx_app_id, wx_app_secret, function(e, response){
 
 _下面方法中 `url` 是当前网页的 URL，不包含`#`及其后面部分_
 ``` js
-var signature = xpay.wxOAuth.getSignature(charge, ticket, url);
+var signature = xpay.wxOAuth.getSignature(payment, ticket, url);
 ```
 然后在 HTML5 SDK 里调用
 ``` js
-xpay.createPayment(charge, callback, signature, false);
+xpay.createPayment(payment, callback, signature, false);
 ```
 
 ### Event 事件
@@ -277,7 +277,7 @@ xpay.identification.identify(
 ```
 
 ### 接口列表
-- [支付/退款](docs/charge.md)
+- [支付/退款](docs/payment.md)
 - [红包](docs/red_envelope.md)
 - [企业付款](docs/transfer.md)
 - [企业批量付款](docs/batch_transfer.md)
