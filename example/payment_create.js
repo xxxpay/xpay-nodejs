@@ -1,7 +1,9 @@
 // api_key 获取方式：登录 [Dashboard](https://dashboard.pay.lucfish.com)->点击管理平台右上角公司名称->开发信息-> Secret Key
-var API_KEY = 'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC';
+// var API_KEY = 'sk_test_ibbTe5jLGCi5rzfH4OqPW9KC';
+var API_KEY = '76352e306e844d8fbe35d9b79b0d770c';
 // app_id 获取方式：登录 [Dashboard](https://dashboard.pay.lucfish.com)->点击你创建的应用->应用首页->应用 ID(App ID)
-var APP_ID = 'app_1Gqj58ynP0mHeX1q';
+// var APP_ID = 'app_1Gqj58ynP0mHeX1q';
+var APP_ID = 'e79d3840cf6c4a1d8654a2819985b154';
 // 设置 api_key
 var xpay = require('../lib/xpay')(API_KEY);
 // xpay.parseHeaders(/*headers*/); // 把从客户端传上来的 Headers 传到这里
